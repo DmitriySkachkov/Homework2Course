@@ -12,63 +12,21 @@ body {
   padding-right: calc(50% - 600px);
 }
 
-.bg-image {
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-.top-bg-image1 {
-    right: 0px;
-}
-
-.top-bg-image2 {
-    left: 63px;
-    top: 94px;
-}
-
-.top-bg-image3 {
-    left: 156px;
-    top: 69px;
-}
-
-.top-bg-image4 {
-    left: 1013px;
-    top: 568px;
-}
-
-.top-bg-image5 {
-    left: 948px;
-    top: 538px;
-}
-
-.overview-bg-image1 {
-    left: 933px;
-    top: 945px;
-}
-
-.overview-bg-image2 {
-    left: 28px;
-    top: 1570px;
-}
-
-.overview-bg-image3 {
-    left: 45px;
-    top: 1622px;
-}
-
 .top {
     height: 800px;
+    background: 
+    url(images/top_bg_image_1.png) right 0px/auto no-repeat,
+    url(images/top_bg_image_2.png) left 63px top 94px/auto no-repeat,
+    url(images/top_bg_image_3.png) left 156px top 69px/auto no-repeat,
+    url(images/top_bg_image_4.png) left 1013px top 568px/auto no-repeat,
+    url(images/top_bg_image_5.png) left 948px top 538px/auto no-repeat;
     background-color: rgb(225, 255, 143);
 }
 
 .header { 
-    position: relative;
     padding-top: 196px;
     width: 768px;  
     height: 358px;
-    z-index: 2;
 }
 
 .header__title {
@@ -109,13 +67,18 @@ body {
 }
 
 .header__button:hover {
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .overview {
+    height: 1470px;
     padding-top: 94px;
     padding-bottom: 50px;
+    background: 
+    url(images/overview_bg_image_1.png) top 77px left 933px/auto no-repeat,
+    url(images/overview_bg_image_2.png) left 25px top 770px/auto no-repeat,
+    url(images/overview_bg_image_3.png) left 40px top 822px/auto no-repeat;
     background-color: rgb(32, 32, 39);
 }
 
@@ -140,20 +103,18 @@ body {
 }
 
 .overview__content {
-    position: relative;
     margin-top: 72px;
     width: 1200px;
     height: 1056px;
     display: grid;
     gap: 32px;
     grid-template-columns: repeat(12, 1fr);
-    z-index: 2;
 }
 
 .overview__card {
     grid-column: span 4;
     width: 378px;
-    height: 474px;
+    height: 512px;
     border-radius: 30px;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -163,7 +124,7 @@ body {
 }
 
 .overview__card_big {
-    height: 512px;
+    height: 552px;
 }
 
 .overview__game-images {
@@ -173,7 +134,8 @@ body {
 }
 
 .overview__game {
-    margin: 32px 36px;
+    margin-top: 32px; 
+    margin-bottom: 36px;
     width: 314px;
 }
 

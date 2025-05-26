@@ -108,12 +108,13 @@ body {
     height: 1056px;
     display: grid;
     gap: 32px;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+    padding: 0px;
 }
 
 .overview__card {
-    grid-column: span 4;
-    width: 378px;
+    width: 100%;
     height: 512px;
     border-radius: 30px;
     background-color: rgb(255, 255, 255);
@@ -121,21 +122,36 @@ body {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
+    box-sizing: border-box;
+}
+
+.overview__card_little {
+    height: 472px;
 }
 
 .overview__card_big {
     height: 552px;
 }
 
+.overview__top-row {
+    grid-row: 1;
+    align-self: start;
+}
+
+.overview__bottom-row {
+    grid-row: 2;
+    align-self: end;
+}
+
 .overview__game-images {
     width: 100%;
     height: 314px;
+    object-fit: cover;
     display: block;
 }
 
 .overview__game {
-    margin-top: 32px; 
-    margin-bottom: 36px;
+    padding: 32px 36px; 
     width: 314px;
 }
 
@@ -205,11 +221,11 @@ body {
         margin-bottom: 32px;
     }
 
-    &__card-left {
+    &__card--left {
         flex-direction: row;
     }
 
-    &__card-right {
+    &__card--right {
         flex-direction: row-reverse;
     }
 

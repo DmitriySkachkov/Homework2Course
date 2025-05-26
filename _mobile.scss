@@ -1,0 +1,84 @@
+@media (max-width: 767px) {
+
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .top {
+        height: 700px;
+        min-width: 375px;
+        background: 
+        url(images/top_bg_image_1_mobile.png) right 0/auto no-repeat,
+        url(images/top_bg_image_2.png) left 37px top 97px/auto no-repeat,
+        url(images/top_bg_image_3.png) left 91px top 64px/auto no-repeat,
+        url(images/top_bg_image_4.png) left 303px top 580px/auto no-repeat,
+        url(images/top_bg_image_5.png) left 272px top 557px/auto no-repeat;
+        background-color: rgb(225, 255, 143);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header { 
+        padding-top: 146px;
+        width: 342px;  
+        height: 370px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            max-width: 262px;
+            height: 196px;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            text-align: center;
+        }
+
+        &__text {
+            margin-bottom: 36px;
+            max-width: 296px;
+            height: 60px;
+            color: rgb(32, 32, 39);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        &__button {
+            width: 285px;
+            height: 55px;
+            color: rgb(255, 255, 255);
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 142%;
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid rgb(32, 32, 39);
+            border-radius: 60px;
+            background: rgb(32, 32, 39);
+        }
+    }
+
+    .overview {
+        display: none;
+    }
+
+    .footer {
+        height: 100px;
+        min-width: 375px;
+
+        &__title {
+            padding-top: 40px;
+            color: rgb(0, 0, 0);    
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+}
+

@@ -103,18 +103,25 @@ body {
 }
 
 .overview__content {
+    position: relative;
     margin-top: 72px;
     width: 1200px;
     height: 1056px;
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
     gap: 32px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: min-content;
-    padding: 0px;
+}
+
+.overview__box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    z-index: 1;
+    grid-column: span 4;
 }
 
 .overview__card {
-    width: 100%;
+    width: 378px;
     height: 512px;
     border-radius: 30px;
     background-color: rgb(255, 255, 255);
@@ -123,6 +130,11 @@ body {
     align-items: center;
     text-decoration: none;
     box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.overview__card:hover {
+    transform: scale(1.08);
 }
 
 .overview__card_little {
@@ -131,16 +143,6 @@ body {
 
 .overview__card_big {
     height: 552px;
-}
-
-.overview__top-row {
-    grid-row: 1;
-    align-self: start;
-}
-
-.overview__bottom-row {
-    grid-row: 2;
-    align-self: end;
 }
 
 .overview__game-images {
@@ -182,7 +184,7 @@ body {
     text-align: left;
 }
 
-.game {
+.games {
     height: 3500px;
     background: 
     url(images/game_bg_image_1.png) top 126px left 1320px/auto no-repeat,
@@ -206,26 +208,26 @@ body {
         width: 1200px;
         height: 3310px;
     }
+}
 
-    &__card {
-        width: 1200px;
-        height: 500px;
-        border-radius: 30px;
-        box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
-        background: rgb(255, 255, 255);
-        display: flex;
+.card {
+    width: 1200px;
+    height: 500px;
+    border-radius: 30px;
+    box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    margin-bottom: 32px;
+
+    &--left {
         flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 0px;
-        margin-bottom: 32px;
     }
 
-    &__card--left {
-        flex-direction: row;
-    }
-
-    &__card--right {
+    &--right {
         flex-direction: row-reverse;
     }
 

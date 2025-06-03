@@ -69,7 +69,6 @@ body {
 .overview {
   height: 1470px;
   padding-top: 94px;
-  padding-bottom: 50px;
   background: url(images/overview_bg_image_1.png) top 77px left 933px/auto no-repeat, url(images/overview_bg_image_2.png) left 25px top 770px/auto no-repeat, url(images/overview_bg_image_3.png) left 40px top 822px/auto no-repeat;
   background-color: rgb(32, 32, 39);
 }
@@ -130,11 +129,11 @@ body {
 }
 
 .overview__card_little {
-  height: 472px;
+  height: 473px;
 }
 
 .overview__card_big {
-  height: 552px;
+  height: 551px;
 }
 
 .overview__game-images {

@@ -72,7 +72,6 @@ body {
 }
 
 .overview {
-    height: 1470px;
     padding-top: 94px;
     background: 
     url(images/overview_bg_image_1.png) top 77px left 933px/auto no-repeat,
@@ -103,9 +102,9 @@ body {
 
 .overview__content {
     position: relative;
+    padding-bottom: 50px;
     margin-top: 72px;
     width: 1200px;
-    height: 1056px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;
@@ -184,7 +183,6 @@ body {
 }
 
 .games {
-    height: 3500px;
     background: 
     url(images/game_bg_image_1.png) top 126px left 1320px/auto no-repeat,
     url(images/game_bg_image_2.png) left 1276px top 94px/auto no-repeat,

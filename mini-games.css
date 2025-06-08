@@ -40,6 +40,7 @@ body {
   border: 1px solid rgb(0, 0, 0);
   border-radius: 30px;
   background: rgb(255, 255, 255);
+  text-align: center;
 }
 .guess-the-number__buttons {
   margin-bottom: 10px;

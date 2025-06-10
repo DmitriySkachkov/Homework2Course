@@ -16,9 +16,16 @@ guessInput.addEventListener('keypress', function(e) {
 });
 
 function checkGuess() {
-    const userGuess = parseInt(guessInput.value);
+    const userGuessString = guessInput.value.trim();
+
+    if (userGuessString === '') {
+        messageDiv.textContent = 'Пожалуйста, введите число';
+        return;
+    }
+
+    const userGuess = parseInt(userGuessString);
     
-    if (isNaN(userGuess) ,  userGuess < 1 , userGuess > 100) {
+    if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
         messageDiv.textContent = 'Пожалуйста, введите число от 1 до 100';
         return;
     }
@@ -35,9 +42,10 @@ function checkGuess() {
     } else {
         messageDiv.textContent = 'Загаданное число меньше!';
     }
-    
+
     guessInput.value = '';
     guessInput.focus();
+
 }
 
 function startNewGame() {

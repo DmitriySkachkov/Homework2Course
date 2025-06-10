@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mini-games.css">
+</head>
+
+<body>
+    <div class="guess-the-number center">
+        <h1 class="guess-the-number__title">Угадай число от 1 до 100</h1>
+        <p class="guess-the-number__text">Введите вашу догадку и нажмите "Проверить":</p>
+        <input class="guess-the-number__input" type="number" id="guess-input" min="1" max="100">
+        
+        <div class="guess-the-number__buttons">
+            <button class="guess-the-number__button" id="guess-button">Проверить</button>
+            <button class="guess-the-number__button" id="new-game-button">Новая игра</button>
+        </div>
+        
+        <div id="message"></div>
+        
+        <div id="attempts">Попыток: 0</div>
+        
+        <a class="guess-the-number__link" href="index.html">На главную</a>
+    </div>
+
+    <script src="guess_the_number.js"></script>
+</body>
+</html>

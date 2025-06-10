@@ -1,46 +1,96 @@
-// ДОМАШНЯЯ РАБОТА 4
-//1 задание
-for (let i=0; i<2; i++) {
-   console.log ('Привет');
-}
-    
-//2 задание
-for (let i=1; i<=5; i++) {
-   console.log (i);
-}
+// Домашняя работа №5
+// Задание №1
+const min = (a , b) => (a < b) ? a:b;
 
-//3 задание
-for (let i=7; i<=22; i++) {
-   console.log (i);
-}
+console.log (min(8 , 4));
+console.log (min(6 , 6));
 
-//4 задание
-const obj = {
-    Коля: '200',
-    Вася: '300',
-    Петя: '400'
+// Задание №2
+function isOdd(n) {
+    if (n % 2 === 0) {
+        return 'Число четное'
+    } else {
+        return 'Число нечетное'
+    }
 }
 
-for (const key in obj) {
-    console.log (`${key} - ${obj[key]} долларов`);
+console.log (isOdd(1));
+console.log (isOdd(2));
+
+// Задание №3
+function square(n) {
+    console.log (n ** 2);
 }
 
-//5 задание
-let n = 1000;
-let num = 0;
+const degree = (n) => n**2;
 
-while(n >= 50) {
-    n /= 2;
-    console.log (n);
-    num++;
+square(3);
+console.log (degree(4));
+
+// Задание №4
+function helloUserAge() {
+    let age = +prompt('Сколько вам лет?');
+
+    if (age < 0) {
+        alert('Вы ввели неправильное значение'); 
+    } else if (age >= 0 || age <= 12) {
+        alert('Привет, друг'); 
+    } else if (age >= 13) {
+        alert('Добро пожаловать!'); 
+    } else {
+        alert('Введите число'); 
+    }
 }
 
-console.log (`Количество итераций: ${num}`);
+helloUserAge();
 
-//6 задание
-let dayFriday = 5;
-let allDay = 31
-
-for (let i=dayFriday; i<=allDay; i+=7) {
-    console.log (`Сегодня пятница, ${i}-е число. Необходимо подготовить отчет.`)
+// Задание №5
+function calc(a , b) {
+    if (isNaN(a) || isNaN(b)) {
+        return 'Одно или оба значения не являются числом'
+    } else {
+        return a * b;
+    }
 }
+
+console.log(calc(5,6));
+console.log(calc(7,'hello'));
+
+// Задание №6
+function getNumber() {
+    let number = prompt('Введите число');
+
+    if (isNaN(number)) {
+        return 'Переданный параметр не является числом'
+    } else {
+        return `${number} в кубе равняется ${number**3}`
+    }
+}
+
+console.log(getNumber());
+
+// Задание №7
+function getArea() {
+    return Math.PI * this.radius ** 2
+}
+
+function getPerimetr() {
+    return 2 * Math.PI * this.radius
+}
+
+const circle1 = {
+    radius: 8,
+    methodGetArea: getArea,
+    methodGetPerimetr: getPerimetr,
+} 
+
+const circle2 = {
+    radius: 9,
+    methodGetArea: getArea,
+    methodGetPerimetr: getPerimetr,
+}
+
+console.log(circle1.methodGetArea())
+console.log(circle2.methodGetArea())
+console.log(circle1.methodGetPerimetr())
+console.log(circle2.methodGetPerimetr())

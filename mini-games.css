@@ -290,4 +290,59 @@ body {
 }
 .turn-the-text-over__link:hover {
   text-decoration: underline;
+}
+
+.simple-quiz {
+  margin-top: 60px;
+}
+.simple-quiz__title {
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+}
+.simple-quiz__buttons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.simple-quiz__button {
+  width: 145px;
+  height: 50px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 60px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.simple-quiz__button:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.simple-quiz__link {
+  margin-top: 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+.simple-quiz__link:hover {
+  text-decoration: underline;
+}
+
+#quiz-conteiner {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
 }/*# sourceMappingURL=mini-games.css.map */

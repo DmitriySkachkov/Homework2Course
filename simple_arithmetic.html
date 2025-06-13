@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mini-games.css">
+</head>
+
+<body>
+    
+    <div class="simple-arithmetic center">
+        <h1 class="simple-arithmetic__title">Простая арифметика</h1>
+        <div class="simple-arithmetic__conteiner">
+            <span id="example"></span>
+            <span> = </span>
+            <input class="simple-arithmetic__input" type="number" id="answer" placeholder="?">
+        </div>
+        <div class="simple-arithmetic__buttons">
+            <button class="simple-arithmetic__button" id="check-btn">Проверить</button>
+            <button class="simple-arithmetic__button" id="new-game-btn">Новая игра</button>
+        </div>
+        <div id="result"></div>
+        <div class="simple-arithmetic__stats">
+            <div class="simple-arithmetic__text">Правильно: <span id="correct-count">0</span></div>
+            <div class="simple-arithmetic__text">Неправильно: <span id="incorrect-count">0</span></div>
+        </div>
+        <a class="simple-arithmetic__link" href="index.html">На главную</a>
+    </div>
+   
+    <script src="simple_arithmetic.js"></script>
+</body>
+</html>

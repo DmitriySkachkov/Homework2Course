@@ -1,96 +1,147 @@
-// Домашняя работа №5
+// Домашняя работа №6
 // Задание №1
-const min = (a , b) => (a < b) ? a:b;
+const  arr = [1, 5, 4, 10, 0, 3];
 
-console.log (min(8 , 4));
-console.log (min(6 , 6));
+for (let i=0; i<arr.length; i++) {
+    console.log(arr[i]);
+    if (arr[i]===10) {
+        break
+    }
+}
 
 // Задание №2
-function isOdd(n) {
-    if (n % 2 === 0) {
-        return 'Число четное'
-    } else {
-        return 'Число нечетное'
-    }
-}
-
-console.log (isOdd(1));
-console.log (isOdd(2));
+console.log(arr.indexOf(4));
 
 // Задание №3
-function square(n) {
-    console.log (n ** 2);
-}
+const arrey = [1, 3, 5, 10, 20];
 
-const degree = (n) => n**2;
-
-square(3);
-console.log (degree(4));
+console.log(arrey.join(' '));
 
 // Задание №4
-function helloUserAge() {
-    let age = +prompt('Сколько вам лет?');
+const arr1 = [];
 
-    if (age < 0) {
-        alert('Вы ввели неправильное значение'); 
-    } else if (age >= 0 || age <= 12) {
-        alert('Привет, друг'); 
-    } else if (age >= 13) {
-        alert('Добро пожаловать!'); 
-    } else {
-        alert('Введите число'); 
+for (let i=0; i<3; i++) {
+    const arr2 = [];
+    for (let i=0; i<3; i++) {
+        arr2.push(1);
     }
+    arr1.push(arr2);
 }
 
-helloUserAge();
+console.log(arr1);
 
 // Задание №5
-function calc(a , b) {
-    if (isNaN(a) || isNaN(b)) {
-        return 'Одно или оба значения не являются числом'
-    } else {
-        return a * b;
-    }
-}
+const newArrey = [1, 1, 1];
 
-console.log(calc(5,6));
-console.log(calc(7,'hello'));
+newArrey.push(2, 2, 2);
+
+console.log(newArrey);
 
 // Задание №6
-function getNumber() {
-    let number = prompt('Введите число');
+const arr3 = [9, 8, 7, 'a', 6, 5];
+arr3.sort();
+arr3.pop();
+console.log(arr3);
 
-    if (isNaN(number)) {
-        return 'Переданный параметр не является числом'
-    } else {
-        return `${number} в кубе равняется ${number**3}`
+// Задание №7
+const arr4 = [9, 8, 7, 6, 5];
+
+const userNumber = +prompt('Введите число');
+
+if (arr4.includes(userNumber)) {
+    alert('Угадал');
+} else {
+    alert('Не угадал');
+}
+
+// Задание №8
+let str = 'abcdef';
+
+str = str.split('');
+
+str.reverse();
+
+str = str.join('');
+
+console.log(str);
+
+// Задание №9
+const arr5 = [[1, 2, 3],[4, 5, 6]];
+const arr6 = [];
+
+for (let i=0; i<arr5.length; i++) {
+    arr6.push(...arr5[i]);
+}
+
+console.log(arr6);
+
+// Задание №10
+const arr7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let i=0; i<arr7.length; i++) {
+    if (arr7[i + 1]) {
+        console.log(arr7[i]+arr7[i + 1]);
     }
 }
 
-console.log(getNumber());
+// Задание №11
+const arr8 = [1, 2, 3];
 
-// Задание №7
-function getArea() {
-    return Math.PI * this.radius ** 2
+function square() {
+    return arr8.map(item => item ** 2);
 }
 
-function getPerimetr() {
-    return 2 * Math.PI * this.radius
+console.log(square(arr8));
+
+// Задание №12
+const arr9 = ['Привет', 'как', 'дела',];
+
+function getLength() {
+    return arr9.map(item => item.length);
 }
 
-const circle1 = {
-    radius: 8,
-    methodGetArea: getArea,
-    methodGetPerimetr: getPerimetr,
-} 
+console.log(getLength(arr9));
 
-const circle2 = {
-    radius: 9,
-    methodGetArea: getArea,
-    methodGetPerimetr: getPerimetr,
+// Задание №13
+const arr10 = [2, -4, 6, -8];
+
+function negativeNumber() {
+    return arr10.filter(item => item < 0);
 }
 
-console.log(circle1.methodGetArea())
-console.log(circle2.methodGetArea())
-console.log(circle1.methodGetPerimetr())
-console.log(circle2.methodGetPerimetr())
+console.log(negativeNumber(arr10));
+
+// Задание №14
+const arr11 = [];
+
+function randomNumber() {
+    return Math.floor(Math.random() * 10);
+}
+
+for (let i=0; i<10; i++) {
+    arr11.push(randomNumber());
+}
+
+const evenArr = [];
+
+for (let i=0; i<arr11.length; i++) {
+    if (arr11[i] % 2 === 0) {
+        evenArr.push(arr11[i]);
+    }
+}
+
+console.log(arr11);
+console.log(evenArr);
+
+// Задание №15
+const arr12 = [];
+
+function randomNumber() {
+    return Math.floor(Math.random() * 10);
+}
+
+for (let i=0; i<10; i++) {
+    arr12.push(randomNumber());
+}
+
+console.log(arr12.reduce((a, b) => a + b) / arr12.length);

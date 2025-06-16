@@ -1,147 +1,74 @@
-// Домашняя работа №6
+// Домашняя работа №7
 // Задание №1
-const  arr = [1, 5, 4, 10, 0, 3];
+let str = 'js';
 
-for (let i=0; i<arr.length; i++) {
-    console.log(arr[i]);
-    if (arr[i]===10) {
-        break
-    }
-}
-
-// Задание №2
-console.log(arr.indexOf(4));
-
-// Задание №3
-const arrey = [1, 3, 5, 10, 20];
-
-console.log(arrey.join(' '));
-
-// Задание №4
-const arr1 = [];
-
-for (let i=0; i<3; i++) {
-    const arr2 = [];
-    for (let i=0; i<3; i++) {
-        arr2.push(1);
-    }
-    arr1.push(arr2);
-}
-
-console.log(arr1);
-
-// Задание №5
-const newArrey = [1, 1, 1];
-
-newArrey.push(2, 2, 2);
-
-console.log(newArrey);
-
-// Задание №6
-const arr3 = [9, 8, 7, 'a', 6, 5];
-arr3.sort();
-arr3.pop();
-console.log(arr3);
-
-// Задание №7
-const arr4 = [9, 8, 7, 6, 5];
-
-const userNumber = +prompt('Введите число');
-
-if (arr4.includes(userNumber)) {
-    alert('Угадал');
-} else {
-    alert('Не угадал');
-}
-
-// Задание №8
-let str = 'abcdef';
-
-str = str.split('');
-
-str.reverse();
-
-str = str.join('');
+str = str.toUpperCase();
 
 console.log(str);
 
-// Задание №9
-const arr5 = [[1, 2, 3],[4, 5, 6]];
-const arr6 = [];
-
-for (let i=0; i<arr5.length; i++) {
-    arr6.push(...arr5[i]);
+// Задание №2
+function filter(arr, str) {
+    const lowerStr = str.toLowerCase();
+    return arr.filter(item => item.toLowerCase().startsWith(lowerStr));
 }
 
-console.log(arr6);
+console.log(filter(['Java', 'JavaScript', "C++"], 'ja'));
+
+// Задание №3
+let numb = 32.58884;
+console.log(Math.floor(numb));
+console.log(Math.ceil(numb));
+console.log(Math.round(numb));
+
+// Задание №4
+console.log(Math.min(52, 53, 49, 77, 21, 32));
+console.log(Math.max(52, 53, 49, 77, 21, 32));
+
+// Задание №5
+function getRandomNumber() {
+    return Math.floor(Math.random() * 10) + 1;
+}
+
+console.log(getRandomNumber());
+
+// Задание №6
+function getRandomNumber2(num) {
+    return Array.from({length: Math.floor(num / 2) }, () => Math.floor(Math.random() * num));
+}
+
+console.log(getRandomNumber2(10));
+
+// Задание №7
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(getRandomInt(1, 10));
+
+// Задание №8
+console.log(new Date());
+
+// Задание №9
+const currentDate = new Date();
+currentDate.setDate(currentDate.getDate() + 73);
+
+console.log(currentDate);
 
 // Задание №10
-const arr7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function formatDate(date) {
+    const days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+    const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    const year = date.getFullYear();
+    const day = date.getDate();
+    const month = date.getMonth();
+    const dayOfWeek = days[date.getDay()];
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+    const second = date.getSeconds();
 
-for (let i=0; i<arr7.length; i++) {
-    if (arr7[i + 1]) {
-        console.log(arr7[i]+arr7[i + 1]);
-    }
+    return `
+    Дата: ${day} ${months[month]} ${year} — это ${dayOfWeek}.
+    Время: ${hour}:${minute}:${second}`;
 }
 
-// Задание №11
-const arr8 = [1, 2, 3];
-
-function square() {
-    return arr8.map(item => item ** 2);
-}
-
-console.log(square(arr8));
-
-// Задание №12
-const arr9 = ['Привет', 'как', 'дела',];
-
-function getLength() {
-    return arr9.map(item => item.length);
-}
-
-console.log(getLength(arr9));
-
-// Задание №13
-const arr10 = [2, -4, 6, -8];
-
-function negativeNumber() {
-    return arr10.filter(item => item < 0);
-}
-
-console.log(negativeNumber(arr10));
-
-// Задание №14
-const arr11 = [];
-
-function randomNumber() {
-    return Math.floor(Math.random() * 10);
-}
-
-for (let i=0; i<10; i++) {
-    arr11.push(randomNumber());
-}
-
-const evenArr = [];
-
-for (let i=0; i<arr11.length; i++) {
-    if (arr11[i] % 2 === 0) {
-        evenArr.push(arr11[i]);
-    }
-}
-
-console.log(arr11);
-console.log(evenArr);
-
-// Задание №15
-const arr12 = [];
-
-function randomNumber() {
-    return Math.floor(Math.random() * 10);
-}
-
-for (let i=0; i<10; i++) {
-    arr12.push(randomNumber());
-}
-
-console.log(arr12.reduce((a, b) => a + b) / arr12.length);
+console.log(formatDate(new Date()));

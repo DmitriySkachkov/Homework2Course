@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW9</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="HW9.css">
+</head>
+<body>
+    <!--Задание №1-->
+    <div class="task1">
+        <h1 id="oneHeading" class="task__heading">Задание №1</h1>
+        <button id="toggleButton" class="task__button">Скрыть</button>
+    </div>
+
+    <!--Задание №2-->
+    <div class="task2">
+        <p id="textParagraph" class="task__text">Задание №2. Этот текст изменит цвет при нажатии на кнопку</p>
+        <button id="colorButton" class="task__button">Изменить цвет</button>
+    </div>
+
+    <!--Задание №3-->    
+    <div class="task3">
+        <h1 id="twoHeading" class="task__heading">Исходный текст заголовка</h1>
+        <button id="changeTextButton" class="task__button">Изменить текст</button>
+    </div>
+    
+    <!--Задание №4--> 
+    <div class="task4">
+        <div class="description1">Первый элемент</div>
+        <h1 class="description1">Второй элемент</h1>
+        <p class="description1">Третий элемент</p>
+        <span class="description1">Четвертый элемент</span>
+    </div>
+
+    <!--Задание №5-->  
+    <div class="task5">
+        <p class="description2">Первый абзац</p>
+        <p class="other-class">Второй абзац</p>
+        <p class="description2">Третий абзац</p>
+        <p>Четвертый абзац</p>
+        <p class="description2">Пятый абзац</p>
+    </div>
+
+    <!--Задание №6-->  
+    <div class="task6">
+        <button id="addButton" class="task__button">Добавить элемент</button>
+    </div>
+
+    <!--Задание №7-->
+    <div class="task7">
+        <p class="description3">Первый абзац</p>
+        <p class="other-class">Второй абзац</p>
+        <p class="description3">Третий абзац</p>
+        <p>Четвертый абзац</p>
+        <p class="description3">Пятый абзац</p>
+
+        <button id="removeButton" class="task__button">Удалить</button>
+    </div>
+
+    <script>
+        // Задание №1
+        const heading1 = document.querySelector('#oneHeading');
+        const button1 = document.querySelector('#toggleButton');
+
+        button1.addEventListener('click', function() {
+            if (heading1.style.display === 'none') {
+                heading1.style.display = 'block';
+                button1.textContent = 'Скрыть';
+            } else {
+                heading1.style.display = 'none';
+                button1.textContent = 'Показать';
+            }
+        });
+
+        // Задание №2
+        const paragraph = document.querySelector('#textParagraph');
+        const button2 = document.querySelector('#colorButton');
+
+        button2.addEventListener('click', function() {
+            paragraph.style.color = 'red';
+        });
+
+        // Задание №3
+        const heading2 = document.querySelector('#twoHeading');
+        const button3 = document.querySelector('#changeTextButton');
+
+        button3.addEventListener('click', function() {
+            heading2.textContent = 'Задание №3 выполнено';
+        });
+
+        // Задание №4
+        const descriptionElements = document.querySelectorAll('.description1');
+        
+        descriptionElements.forEach(element => {
+            element.textContent = 'Задание №4';
+        });
+
+        // Задание №5
+        const descriptionParagraphs = document.querySelectorAll('p.description2');
+        
+        descriptionParagraphs.forEach(paragraph => {
+            paragraph.textContent = 'Задание №5';
+        });
+
+        // Задание №6
+        const addButton = document.getElementById('addButton');
+        
+        addButton.addEventListener('click', function() {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'Задание №6';
+            document.body.appendChild(newParagraph);
+        });
+
+        // Задание №7
+        const removeButton = document.getElementById('removeButton');
+        
+        removeButton.addEventListener('click', function() {
+            const firstDescription = document.querySelector('p.description3');
+            if (firstDescription) {
+                firstDescription.remove();
+            } else {
+                alert('Элементы с классом description закончились!');
+            }
+        });
+    </script>
+</body>
+</html>

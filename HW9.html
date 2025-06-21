@@ -89,21 +89,21 @@
         const button3 = document.querySelector('#changeTextButton');
 
         button3.addEventListener('click', function() {
-            heading2.textContent = 'Задание №3 выполнено';
+            heading2.textContent = 'Привет, мир';
         });
 
         // Задание №4
         const descriptionElements = document.querySelectorAll('.description1');
         
         descriptionElements.forEach(element => {
-            element.textContent = 'Задание №4';
+            element.textContent = 'Измененный текст';
         });
 
         // Задание №5
         const descriptionParagraphs = document.querySelectorAll('p.description2');
         
         descriptionParagraphs.forEach(paragraph => {
-            paragraph.textContent = 'Задание №5';
+            paragraph.textContent = 'Новый текст';
         });
 
         // Задание №6
@@ -111,7 +111,7 @@
         
         addButton.addEventListener('click', function() {
             const newParagraph = document.createElement('p');
-            newParagraph.textContent = 'Задание №6';
+            newParagraph.textContent = 'Новый абзац';
             document.body.appendChild(newParagraph);
         });
 

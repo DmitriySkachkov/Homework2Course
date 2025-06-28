@@ -16,6 +16,7 @@ body {
   height: 800px;
   background: url(images/top_bg_image_1.png) right 0px/auto no-repeat, url(images/top_bg_image_2.png) left 63px top 94px/auto no-repeat, url(images/top_bg_image_3.png) left 156px top 69px/auto no-repeat, url(images/top_bg_image_4.png) left 1013px top 568px/auto no-repeat, url(images/top_bg_image_5.png) left 948px top 538px/auto no-repeat;
   background-color: rgb(225, 255, 143);
+  position: relative;
 }
 .top__strip {
   position: absolute;
@@ -132,7 +133,6 @@ body {
   position: relative;
   padding-bottom: 50px;
   margin-top: 72px;
-  width: 1200px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 32px;
@@ -249,7 +249,6 @@ body {
   flex-direction: row-reverse;
 }
 .card__content {
-  width: 600px;
   padding: 48px;
 }
 .card__content-title {
@@ -317,7 +316,7 @@ body {
   text-align: center;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 768px) {
   .center {
     padding-left: 16px;
     padding-right: 16px;

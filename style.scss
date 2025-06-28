@@ -21,6 +21,7 @@ body {
     url(images/top_bg_image_4.png) left 1013px top 568px/auto no-repeat,
     url(images/top_bg_image_5.png) left 948px top 538px/auto no-repeat;
     background-color: rgb(225, 255, 143);
+    position: relative;
 
     &__strip {
         position: absolute;
@@ -143,7 +144,6 @@ body {
     position: relative;
     padding-bottom: 50px;
     margin-top: 72px;
-    width: 1200px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;
@@ -267,7 +267,7 @@ body {
     }
 
     &__content {
-        width: 600px;
+        
         padding: 48px;
     }
 

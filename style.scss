@@ -21,6 +21,45 @@ body {
     url(images/top_bg_image_4.png) left 1013px top 568px/auto no-repeat,
     url(images/top_bg_image_5.png) left 948px top 538px/auto no-repeat;
     background-color: rgb(225, 255, 143);
+    position: relative;
+
+    &__strip {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        height: 90px;
+        overflow: hidden;
+        white-space: nowrap;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(50px);
+        background: rgb(188, 236, 48);
+
+    }
+
+    &__strip-content {
+        padding-top: 27px;
+        padding-left: 100%;
+        width: 100%;
+        row-gap: 50px;
+        color: rgb(32, 32, 39);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: 4%;
+        text-align: left;
+        text-transform: uppercase;
+        display: inline-block;
+        animation: marquee 20s linear infinite;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .header { 
@@ -104,7 +143,6 @@ body {
     position: relative;
     padding-bottom: 50px;
     margin-top: 72px;
-    width: 1200px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;
@@ -228,7 +266,7 @@ body {
     }
 
     &__content {
-        width: 600px;
+        
         padding: 48px;
     }
 
